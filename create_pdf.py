@@ -7,6 +7,7 @@ pdf.add_page()
 
 pdf.set_font('helvetica', '', 16)
 
+pdf.cell(txt="Find 5 quotes below one after another:", ln=True, border=True)
 for quote in quotes:
 	pdf.cell(40,10, quote, ln=True)
 
