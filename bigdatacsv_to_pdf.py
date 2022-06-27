@@ -40,6 +40,8 @@ for i in authors:
 	formatted_authors.append(b)
 print("Problem of unrecognizable font appeared. Fixed using str module.")
 
+pdf.cell(txt="100 quotes about love", ln=1)
+pdf.ln(5)
 # Writing the first Quote and Author columns on pdf
 for i in range(len(quotes)):
 	pdf.cell(txt=f"{i} - {formatted_quotes[i]} - {formatted_authors[i]}", ln=True)
@@ -49,4 +51,4 @@ print("List items coded to appear on pdf.")
 # outputting pdf
 pdf.output("love_quotes.pdf")
 print("Creating pdf...")
-print("Pdf created successfully!")
+print("Pdf created successfully - love_quotes.pdf")
