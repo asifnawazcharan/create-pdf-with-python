@@ -5,10 +5,11 @@ pdf.add_page()
 
 pdf.set_font('helvetica', '', 16)
 
-# pdf.cell(txt=f"Hello Aqsa", ln=True)
+pdf.header("This is a heading")
+pdf.ln(5) # gives space of 5 mm below the header
+pdf.cell(txt="This is how one line can be written to a pdf. ")
+pdf.ln(5)
+pdf.multi_cell(0, txt="This is a bigger text which can not fix on one line so we will fill this up quickly sdfjks sdigjsl sdgijkslgj sdgksljgsg slgdjksljg sgdjsljgs sgdjlskgjlsg.")
 
-for i in range(100000):
-	pdf.cell(txt=f"{i} - Hello Aqsa", ln=True)
-
-pdf.output('output.pdf')
+pdf.output('create_pdf.pdf')
 print("pdf created - name: output.pdf")
