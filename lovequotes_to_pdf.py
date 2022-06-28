@@ -5,13 +5,13 @@ import str
 
 # setting up a pdf file
 pdf = FPDF('P', 'mm', 'A4')
-pdf.set_font("Helvetica", "B", 10)
+pdf.set_font("Helvetica", "", 20)
 pdf.add_page()
 print("A pdf file created.")
 
 
 # extracting data from csv into df
-data = pd.read_csv("love_quotes.csv", nrows=100).fillna('')
+data = pd.read_csv("love_quotes.csv", nrows=10).fillna('')
 print("Data extracted from csv")
 
 # # cleaning data by removing null values
@@ -44,11 +44,11 @@ pdf.cell(txt="100 quotes about love", ln=1)
 pdf.ln(5)
 # Writing the first Quote and Author columns on pdf
 for i in range(len(quotes)):
-	pdf.cell(txt=f"{i} - {formatted_quotes[i]} - {formatted_authors[i]}", ln=True)
-	pdf.ln(3)
+	pdf.multi_cell(0,txt=f"{i}. {formatted_quotes[i]}\n   - {formatted_authors[i]}", ln=True)
+	pdf.ln(7)
 print("List items coded to appear on pdf.")
 
 # outputting pdf
-pdf.output("love_quotes.pdf")
+pdf.output("love_quotes_with_multicell.pdf")
 print("Creating pdf...")
-print("Pdf created successfully - love_quotes.pdf")
+print("Pdf created successfully - love_quotes_with_multicell.pdf")
