@@ -40,11 +40,13 @@ pdf.multi_cell(0, txt="This workbook contains sentences in present and a space b
 pdf.ln(10)
 
 pdf.multi_cell(0, txt="For example:", ln=1)
+pdf.ln(3)
 pdf.multi_cell(0, txt="Present - The boy writes a letter.", ln=1)
 pdf.multi_cell(0, txt="Past -  The boy wrote a letter.", ln=1)
 pdf.ln(10)
 
 pdf.multi_cell(0, txt="Another example:", ln=1)
+pdf.ln(3)
 pdf.multi_cell(0, txt="Present - Is he sick?", ln=1)
 pdf.multi_cell(0, txt="Past -  Was he sick?", ln=1)
 pdf.ln(10)
