@@ -5,7 +5,7 @@ import str
 
 # file specifications
 pdf = FPDF('P', "mm", 'A4')
-pdf.set_font("Helvetica", "B", 20)
+pdf.set_font("Helvetica", "B", 40)
 pdf.add_page()
 
 # get the data from csv
@@ -33,10 +33,13 @@ for i in past:
 
 # below goes the content of the file
 pdf.multi_cell(0, txt="English Grammar Practice Workbook: Past to Present", align="c", ln=1)#header
-pdf.ln(10)
 
+pdf.ln(10)
+pdf.set_font("Helvetica", "B", 30)
+pdf.multi_cell(0, txt="(50 sentences with answers)", align="c", ln=1)#header
+pdf.ln(10)
 pdf.set_font("Helvetica", "", 15)
-pdf.multi_cell(0, txt="This workbook contains sentences in past and a space below them where the student can practice writing the present version of the sentence. Answers are given at the end of the file. This can be used as a homework, classwork for beginners in english language learning.", ln=1)
+pdf.multi_cell(0, txt="This workbook contains 50 sentences in past and a space below them where the student can practice writing the present version of the sentence. Answers are given at the end of the file. This can be used as a homework, classwork for beginners in english language learning. This will help students practice the coversion between different tenses.", ln=1)
 pdf.ln(10)
 
 pdf.multi_cell(0, txt="For example:", ln=1)
